@@ -1,1 +1,35 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en-US">
+ 
+<html>
+
+</head>
+<body>
+
+<label for="tbuser">Name:</label>
+<input type="text" id="tbuser" placeholder="Enter Username">
+
+<input type="button" id="btn1" value="Click Me">
+
+<p class="output" id="output1"></p>
+
+<div>
+<br>
+<div>
+<body>
+  <script>
+    const txt1 = document.getElementById('tbuser');
+    const btn1 = document.getElementById('btn1');
+    const out1 = document.getElementById('output1');
+    
+    function displayValue() {
+    	out1.innerHTML = txt1.value;
+    }
+    
+    btn1.addEventListener('click',displayValue);
+    
+  </script>
+
+</body>
+
+</html>
