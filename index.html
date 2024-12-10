@@ -1,35 +1,21 @@
-<!DOCTYPE html>
-<html lang="en-US">
- 
+<<!DOCTYPE html>
 <html>
 
-</head>
-<body>
+      <head>
 
-<label for="tbuser">Name:</label>
-<input type="text" id="tbuser" placeholder="Enter Username">
-
-<input type="button" id="btn1" value="Click Me">
-
-<p class="output" id="output1"></p>
-
-<div>
-<br>
-<div>
-<body>
-  <script>
-    const txt1 = document.getElementById('tbuser');
-    const btn1 = document.getElementById('btn1');
-    const out1 = document.getElementById('output1');
-    
-    function displayValue() {
-    	out1.innerHTML = txt1.value;
-    }
-    
-    btn1.addEventListener('click',displayValue);
-    
-  </script>
-
-</body>
-
+                <meta charset="utf-8" />
+                <title>Audio tone playing test</title>
+                <meta name="viewport" content="width=device-width, initial-scale-1" />
+                // Load Tone JS
+                <script src="https://unpkg.com/tone"></script>
+                <script>
+                        function playNote(){
+                              const synth = new Tone.Synth().toDestination();
+                              synth.triggerAttackRelease("C4", "8n");
+                        }
+                </script>
+      </head>
+      <body> <h1>HTML Tone.js Demo</h1>
+      <button onclick="playNote()">Click to play note!</button>
+      </body>
 </html>
