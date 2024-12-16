@@ -1,1 +1,66 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en-US">
+
+<html>
+
+<head>
+
+<label for="TextBoxNote">Notes:</label>
+<input type="text" id="TextBoxNote" placeholder="Enter Note String">
+
+<input type="button" id="ClickMeButton" value="Click Me">
+
+<p class="output" id="StringOutput"></p>
+
+<div>
+<br>
+<div>
+</head>
+<body>
+  <script>
+    const txt1 = document.getElementById('TextBoxNote');
+    const btn1 = document.getElementById('ClickMeButton');
+    const out1 = document.getElementById('StringOutput');
+
+    function displayValue() {
+    	out1.innerHTML = txt1.value;
+    }
+
+    btn1.addEventListener('click',displayValue);
+
+    function playNotes() {
+
+	const txt1 = document.getElementById('TextBoxNote').value.toLowerCase();
+
+    const notes = {
+    	a: C4
+    	b: D4
+    	c: E4
+    	d: F4
+    	e: G4
+    	f: A4
+    	g: B4
+    	h: C5
+   };
+
+   let i = 0;
+   <script src="https://unpkg.com/tone"></script>
+   <script>
+   	function playNextNote() {
+   		if (i < input.length) {
+   			const letter = input[i];
+   			const frequency = notes[letter];
+   				if (frequency) {
+			                  const synth = new Tone.Synth().toDestination();
+                        synth.triggerAttackRelease("C4", "8n");
+                    };
+                    i++;
+                    setTimeout(playNextNote, 600); // Delay between notes
+                 }
+               }
+
+               playNextNote();
+             }
+  </script>
+</body>
+</html>
