@@ -71,6 +71,7 @@ ncth
 ngz
 nks
 ns
+nd
 nt
 nth
 nts
